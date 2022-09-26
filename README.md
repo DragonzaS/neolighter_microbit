@@ -1,64 +1,33 @@
+# **NeoLighter**
 
-> Open this page at [https://dragonzas.github.io/hmm/](https://dragonzas.github.io/hmm/)
-
-## Use as Extension
-
-This repository can be added as an **extension** in MakeCode.
-
-* open [https://makecode.microbit.org/](https://makecode.microbit.org/)
-* click on **New Project**
-* click on **Extensions** under the gearwheel menu
-* search for **https://github.com/dragonzas/hmm** and import
-
-## Edit this project ![Build status badge](https://github.com/dragonzas/hmm/workflows/MakeCode/badge.svg)
-
-To edit this repository in MakeCode.
+### **About**
+#### > _What is this, it's functions and everything else_
+This is a smaller program made for micro:bit, which has two modes:
+##### **Rainbow**
+Colorful rainbow is going to show up on the NeoPixel LED strip when you switch to this mode.
+##### **Torch**
+Can be used to light up dark places. ***Also features adjustable brightness!!***
+**Also is recommended to have some sort of cooling on the LEDs.**
+### **How to import into Makecode**
+To import this repository into MakeCode:
 
 * open [https://makecode.microbit.org/](https://makecode.microbit.org/)
 * click on **Import** then click on **Import URL**
 * paste **https://github.com/dragonzas/hmm** and click import
 
-## Blocks preview
+### **Requirements and Usage**
+#### Requirements
+* WS2812B NeoPixel LED strip(max length that your power supply can handle and which will also handle the micro:bit)
+* Standalone power supply with voltage(5 volts, 12 volts, or other) required for the LEDs (Optional, but micro:bit's built-in supply won't handle much) 
+* Cables to connect everything together
+* Any other parts you think you require.
 
-This image shows the blocks code from the last commit in master.
-This image may take a few minutes to refresh.
+Button A is for decreasing brightness and Button B for the opposite.
+Press both buttons at the same time to switch modes.
 
-![A rendered view of the blocks](https://github.com/dragonzas/hmm/raw/master/.github/makecode/blocks.png)
+#### Usage (This is not instruction how to PROPERLY do it, use any other required parts to properly power the LEDs and maybe Logic shifter from 3.3V to 5V)
+* Connect the **DATAIN** pin of LED strip to **P0** of Micro:bit.
+* Connect Power to the LEDs.
+* Set the length of the LED strip in code to what it is.
+* Flash the code to micro:bit and enjoy!
 
-#### Metadata (used for search, rendering)
-
-* for PXT/microbit
-<script src="https://makecode.com/gh-pages-embed.js"></script><script>makeCodeRender("{{ site.makecode.home_url }}", "{{ site.github.owner_name }}/{{ site.github.repository_name }}");</script>
-
-
-
-> Open this page at [https://dragonzas.github.io/neolighter_microbit/](https://dragonzas.github.io/neolighter_microbit/)
-
-## Use as Extension
-
-This repository can be added as an **extension** in MakeCode.
-
-* open [https://makecode.microbit.org/](https://makecode.microbit.org/)
-* click on **New Project**
-* click on **Extensions** under the gearwheel menu
-* search for **https://github.com/dragonzas/neolighter_microbit** and import
-
-## Edit this project ![Build status badge](https://github.com/dragonzas/neolighter_microbit/workflows/MakeCode/badge.svg)
-
-To edit this repository in MakeCode.
-
-* open [https://makecode.microbit.org/](https://makecode.microbit.org/)
-* click on **Import** then click on **Import URL**
-* paste **https://github.com/dragonzas/neolighter_microbit** and click import
-
-## Blocks preview
-
-This image shows the blocks code from the last commit in master.
-This image may take a few minutes to refresh.
-
-![A rendered view of the blocks](https://github.com/dragonzas/neolighter_microbit/raw/master/.github/makecode/blocks.png)
-
-#### Metadata (used for search, rendering)
-
-* for PXT/microbit
-<script src="https://makecode.com/gh-pages-embed.js"></script><script>makeCodeRender("{{ site.makecode.home_url }}", "{{ site.github.owner_name }}/{{ site.github.repository_name }}");</script>
