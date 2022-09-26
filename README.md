@@ -2,7 +2,7 @@
 
 ### **About**
 #### > _What is this, it's functions and everything else_
-This is a smaller program made for micro:bit, which has two modes:
+This is a smaller program made for [micro:bit](https://microbit.org/), which has two modes:
 ##### **Rainbow**
 Colorful rainbow is going to show up on the NeoPixel LED strip when you switch to this mode.
 ##### **Torch**
