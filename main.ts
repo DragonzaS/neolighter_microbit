@@ -5,6 +5,8 @@ input.onButtonPressed(Button.AB, function () {
         strip.showRainbow(1, 360)
     }
 })
+let graphMax
+let graphvalue = 0 
 let timer = 0
 let timer2 = 0
 let mode = 0
@@ -21,7 +23,7 @@ basic.forever(function () {
             if (10 < rainbowDelay) {
                 rainbowDelay += -1
             }
-        } else {
+        } else if(mode == -1) {
             if (0 < brightness) {
                 brightness += -1
             }
@@ -31,7 +33,7 @@ basic.forever(function () {
             if (rainbowDelay < 500) {
                 rainbowDelay += 1
             }
-        } else {
+        } else if(mode == -1) {
             if (brightness < 255) {
                 brightness += 1
             }
@@ -54,34 +56,43 @@ basic.forever(function () {
 })
 control.inBackground(function () {
     while (true) {
-        if (100 < brightness) {
-            if (timer == 0) {
-                timer = control.millis()
-            } else if (control.millis() - timer > 500) {
-                warningshift = warningshift * -1
-                timer = 0
-            }
-            if (warningshift == 1) {
-                basic.showLeds(`
+        if( mode == -1) {
+            if (100 < brightness) {
+                if (timer == 0) {
+                    timer = control.millis()
+                } else if (control.millis() - timer > 500) {
+                    warningshift = warningshift * -1
+                    timer = 0
+                }
+                if (warningshift == 1) {
+                    basic.showLeds(`
                     . # # # .
                     . # # # .
                     . . # . .
                     . . . . .
                     . . # . .
                     `)
-            } else {
-                basic.showLeds(`
+                } else {
+                    basic.showLeds(`
                     # . . # .
                     . # . . #
                     . # . . #
                     # . . # .
                     # # # # #
                     `)
+                }
             }
         }
+        if (mode == 1) {
+            graphvalue = rainbowDelay
+            graphMax = 500
+        } else {
+            graphvalue = brightness
+            graphMax = 255
+        }
         led.plotBarGraph(
-        brightness,
-        255
+        graphvalue,
+        graphMax
         )
     }
 })
